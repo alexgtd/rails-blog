@@ -1,0 +1,22 @@
+<h1>Users list</h1>
+
+<table class="table mb-3">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nickname</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <th scope="row">1</th>
+        <td><%= user.nickname %></td>
+        <td><%= user.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <%= link_to "Create user", new_user_path, class: "btn btn-primary" %>
+</table>
+

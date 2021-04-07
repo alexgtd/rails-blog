@@ -1,0 +1,11 @@
+<div class="card mb-3">
+  <div class="card-body">
+    <h2 class="card-title"><%= @user.nickname %></h2>
+    <p class="card-text"><%= @user.email %></p>
+    <%= link_to "Edit", edit_user_path(@user), class: "card-link" %>
+    <%= link_to "Destroy", user_path(@user),
+      method: :delete,
+      data: { confirm: "Are you sure?" },
+      class: "card-link" %>
+  </div>
+</div>
