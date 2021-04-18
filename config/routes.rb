@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+
+  root "articles#index"
   get 'help', to: 'static_pages#help'
   get 'about', to: 'static_pages#about'
-  root "articles#index"
+  get 'contact', to: 'static_pages#contact'
 
   resources :users
 
