@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'static_pages/help'
-  get 'static_pages/about'
+  get 'help', to: 'static_pages#help'
+  get 'about', to: 'static_pages#about'
   root "articles#index"
 
   resources :users
@@ -8,5 +8,4 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
